@@ -8,7 +8,7 @@ class DjangoPrometheusConfig(AppConfig):
     verbose_name = 'Django Prometheus'
 
     def ready(self):
-        port = getattr(settings, 'PROMETHEUS_METRICS_PORT')
+        port = getattr(settings, 'PROMETHEUS_METRICS_PORT', None)
         addr = getattr(settings, 'PROMETHEUS_METRICS_ADDRESS', '')
 
         if port:
