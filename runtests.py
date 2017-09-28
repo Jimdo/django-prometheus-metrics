@@ -19,7 +19,7 @@ DEFAULT_SETTINGS = dict(
 
     SITE_ID = 1,
 
-    MIDDLEWARE_CLASSES = [
+    MIDDLEWARE = [
         'django_prometheus.middleware.PrometheusBeforeMiddleware',
         'django.middleware.common.CommonMiddleware',
     ],
