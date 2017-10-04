@@ -12,6 +12,7 @@ See https://github.com/Jimdo/django-prometheus-metrics
 """,
     url='https://github.com/Jimdo/django-prometheus-metrics',
     author='Jimdo GmbH',
+    author_email='platformteam@jimdo.com',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
