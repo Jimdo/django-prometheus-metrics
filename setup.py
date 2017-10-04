@@ -1,16 +1,16 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='django-prometheus',
+    name='django-prometheus-metrics',
     version='0.0.1',
     packages=find_packages(),
     license='MIT License',
     description='Monitoring middleware for prometheus.',
-    long_description="""Django-Prometheus
+    long_description="""Django-Prometheus-Metrics
 This library lets you expose metrics in your django application for Prometheus consumption.
-See https://github.com/Jimdo/django-prometheus
+See https://github.com/Jimdo/django-prometheus-metrics
 """,
-    url='https://github.com/Jimdo/django-prometheus',
+    url='https://github.com/Jimdo/django-prometheus-metrics',
     author='Jimdo GmbH',
     classifiers=[
         'Environment :: Web Environment',
