@@ -20,7 +20,7 @@ DEFAULT_SETTINGS = dict(
     SITE_ID = 1,
 
     MIDDLEWARE = [
-        'django_prometheus.middleware.PrometheusBeforeMiddleware',
+        'django_prometheus_metrics.middleware.PrometheusBeforeMiddleware',
         'django.middleware.common.CommonMiddleware',
     ],
 
@@ -49,7 +49,7 @@ DEFAULT_SETTINGS = dict(
             },
         },
         'loggers': {
-            'django_prometheus': {
+            'django_prometheus_metrics': {
                 'handlers': ['console'],
                 'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
             },
@@ -63,10 +63,10 @@ DEFAULT_SETTINGS = dict(
         'django.contrib.sites',
         'django.contrib.messages',
         'django.contrib.admin',
-        'django_prometheus',
+        'django_prometheus_metrics',
     ],
 
-    ROOT_URLCONF = 'django_prometheus.urls',
+    ROOT_URLCONF = 'django_prometheus_metrics.urls',
 
     USE_TZ = True,
 
@@ -87,7 +87,7 @@ def runtests(*test_args):
         from django.test.runner import DiscoverRunner
         runner_class = DiscoverRunner
         if not test_args:
-            test_args = ["django_prometheus.tests"]
+            test_args = ["django_prometheus_metrics.tests"]
     except ImportError:
         from django.test.simple import DjangoTestSuiteRunner
         runner_class = DjangoTestSuiteRunner

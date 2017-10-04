@@ -1,5 +1,5 @@
-# django-prometheus
-[![Build Status](https://travis-ci.com/Jimdo/django-prometheus.svg?token=1djnvUyMgtcVefCz54T4&branch=master)](https://travis-ci.com/Jimdo/django-prometheus)
+# django-prometheus-metrics
+[![Build Status](https://travis-ci.com/Jimdo/django-prometheus-metrics.svg?token=1djnvUyMgtcVefCz54T4&branch=master)](https://travis-ci.com/Jimdo/django-prometheus-metrics)
 
 Export Django monitoring metrics for Prometheus consumption.
 
@@ -17,7 +17,7 @@ Add it to your apps:
 ```
 INSTALLED_APPS = (
     # ...
-    'oidc_provider',
+    'django_prometheus_metrics',
     # ...
 )
 ```
@@ -25,7 +25,7 @@ INSTALLED_APPS = (
 Register the middleware:
 ```
 MIDDLEWARE_CLASSES = (
-    'django_prometheus.middleware.PrometheusBeforeMiddleware',
+    'django_prometheus_metrics.middleware.PrometheusBeforeMiddleware',
     # All your other middlewares go here
     # ...
 )
@@ -35,7 +35,7 @@ Add the urls:
 ```
 urlpatterns = [
     # ...
-    url('', include('django_prometheus.urls')),
+    url('', include('django_prometheus_metrics.urls')),
     # ...
 ]
 ```
@@ -54,7 +54,7 @@ django_model_deletes_total | Counter | `model` | Number of deletes on a certain 
 In order to monitor a certain model your model has to inherit from the `MetricsModelMixin` in addition to the django model class:
 
 ```
-from django_prometheus.models import MetricsModelMixin
+from django_prometheus_metrics.models import MetricsModelMixin
 
 class Car(MetricsModelMixin('car'), models.Model):
     name = models.CharField(max_length=100, unique=True)

@@ -1,6 +1,6 @@
 from django.db.models import CharField, Model
-from django_prometheus.middleware import PrometheusBeforeMiddleware
-from django_prometheus.models import MetricsModelMixin
+from django_prometheus_metrics.middleware import PrometheusBeforeMiddleware
+from django_prometheus_metrics.models import MetricsModelMixin
 from django.test import TestCase
 from prometheus_client import REGISTRY as registry
 
