@@ -1,13 +1,13 @@
 from prometheus_client import Counter
 
 model_inserts_total = Counter(
-    'django_model_inserts_total', 'Number of inserts on a certain model.', ['model']
+    'django_model_inserts_total', 'Number of inserts on a certain model', ['model']
 )
 model_updates_total = Counter(
-    'django_model_updates_total', 'Number of updates on a certain model.', ['model']
+    'django_model_updates_total', 'Number of updates on a certain model', ['model']
 )
 model_deletes_total = Counter(
-    'django_model_deletes_total', 'Number of deletes on a certain model.', ['model']
+    'django_model_deletes_total', 'Number of deletes on a certain model', ['model']
 )
 
 

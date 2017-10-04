@@ -4,7 +4,7 @@ from timeit import default_timer
 
 requests_total = Counter(
     'django_http_requests_total',
-    'Total count of requests.',
+    'Total count of requests',
     ['status_code', 'method', 'view'])
 requests_latency = Histogram(
     'django_http_requests_latency_seconds',
