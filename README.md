@@ -11,6 +11,7 @@ Export Django monitoring metrics for Prometheus consumption.
 
 Install the package via pip:
 ```
+pip install django-prometheus-metrics
 ```
 
 Add it to your apps:
