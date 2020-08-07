@@ -22,6 +22,9 @@ DEFAULT_SETTINGS = dict(
     MIDDLEWARE = [
         'django_prometheus_metrics.middleware.PrometheusBeforeMiddleware',
         'django.middleware.common.CommonMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware'
     ],
 
     TEMPLATES = [
