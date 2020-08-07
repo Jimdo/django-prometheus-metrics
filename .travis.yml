@@ -4,10 +4,12 @@ python:
   - 3.4
   - 3.5
   - 3.6
+  - 3.8
 env:
   - DJANGO_VERSION=1.10
   - DJANGO_VERSION=1.11
   - DJANGO_VERSION=2.0a1
+  - DJANGO_VERSION=2.2
 matrix:
   exclude:
     - python: 2.7
