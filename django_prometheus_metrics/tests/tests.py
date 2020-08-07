@@ -6,8 +6,6 @@ from prometheus_client import REGISTRY as registry
 
 def get_metric(name, **labels):
     for metric in registry.collect():
-        print(metric)
-        print(metric.samples)
         for k, l, v, t, e in metric.samples:
             if k == name and l == labels:
                 return v
