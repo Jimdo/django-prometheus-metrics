@@ -4,8 +4,8 @@
 Export Django monitoring metrics for Prometheus consumption.
 
 ## Requirements
-* Django: `1.10`, `1.11`, `2.0a1`
-* Python `2.7`, `3.4`, `3.5`, `3.6`
+* Django: `2.2`
+* Python `3.6`, `3.8`
 
 ## Installation
 
