@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: django-prometheus-metrics
+  annotations:
+    github.com/project-slug: Jimdo/django-prometheus-metrics
+spec:
+  type: library
+  lifecycle: unknown
+  owner: user-access
